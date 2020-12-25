@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+    useEffect(() => {
+        fetch('https://myip.ms/s.php', {
+            method: 'POST',
+            body: JSON.stringify({"home_txt": 'mgutm.ru'})
+        }).then(response => document.appendChild(response))
+    }, [])
+
   return (
     <div className="App">
       <header className="App-header">
