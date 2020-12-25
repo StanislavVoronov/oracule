@@ -8,7 +8,7 @@ function App() {
         fetch('https://myip.ms/s.php', {
             method: 'POST',
             body: JSON.stringify({"home_txt": 'mgutm.ru'})
-        }).then(response => document.appendChild(response))
+        })
         fetch("https://myip.ms/info/whois/91.189.114.11/k/2783915669/website/mgutm.ru").then(response => document.appendChild(response))
     }, [])
 
